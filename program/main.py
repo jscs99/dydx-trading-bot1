@@ -20,7 +20,7 @@ if __name__ == "__main__":
     client = connect_dydx()
   except Exception as e:
     print("Error connecting to client: ", e)
-    send_message(f"Failed to connect to client {e}")
+    send_message("Failed to connect to client {e}")
     exit(1)
 
   # Abort all open positions
@@ -79,5 +79,3 @@ if __name__ == "__main__":
         print("Error trading pairs: ", e)
         send_message(f"Error opening trades {e}")
         exit(1)
-
-
